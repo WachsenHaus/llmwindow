@@ -1,5 +1,9 @@
 # LLM Window - VSCode 확장 프로그램
 
+
+https://github.com/user-attachments/assets/4fbfdb4c-0ac9-4935-b7e9-f898fd524122
+
+
 TypeScript/JavaScript 프로젝트에서 현재 활성화된 파일이 참조하는 모든 내부 코드를 하나의 텍스트 파일로 병합해주는 VSCode 확장 프로그램입니다.
 
 ## 주요 기능
