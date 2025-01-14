@@ -40,16 +40,18 @@ export async function mergeAllFiles() {
       compilerOptions
     );
 
-    // 5) 결과물을 새 파일에 저장 & 열기
-    const outFileName =
-      path.basename(rootFilePath, path.extname(rootFilePath)) + '_merged.ts';
-    const outFilePath = path.join(path.dirname(rootFilePath), outFileName);
+    // 5) 새 창에서 병합된 코드 보여주기
+    const doc = await vscode.workspace.openTextDocument({
+      content: mergedCode,
+      language: 'typescript',
+    });
 
-    fs.writeFileSync(outFilePath, mergedCode, 'utf-8');
+    await vscode.window.showTextDocument(doc, {
+      preview: false,
+      viewColumn: vscode.ViewColumn.Beside, // 현재 에디터 옆에 새 창으로 열기
+    });
 
-    const doc = await vscode.workspace.openTextDocument(outFilePath);
-    await vscode.window.showTextDocument(doc);
-    vscode.window.showInformationMessage(`Merged file created: ${outFilePath}`);
+    vscode.window.showInformationMessage('코드 병합이 완료되었습니다.');
   } catch (error: any) {
     vscode.window.showErrorMessage(
       `파일 병합 중 오류가 발생했습니다: ${error.message}`
