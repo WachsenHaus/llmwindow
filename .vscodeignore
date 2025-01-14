@@ -1,0 +1,41 @@
+# Source files
+src/**
+.gitignore
+.yarnrc
+**/tsconfig.json
+**/.eslintrc.json
+**/*.map
+**/*.ts
+
+# Exclude specific files
+.vscode/**
+.vscode-test/**
+.github/**
+.git/**
+
+# Include necessary files
+!out/**/*.js
+!src/**/*.d.ts
+
+# Development files
+.eslintignore
+.eslintrc.js
+.prettierrc
+.prettierrc.js
+webpack.config.js
+node_modules/**
+
+# Test files
+test/**
+**/*.test.ts
+**/*.spec.ts
+coverage/**
+
+# Documentation and misc
+images/**
+docs/**
+**/*.vsix
+**/*.log
+**/*.tgz
+**/*.zip
+.editorconfig

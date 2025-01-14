@@ -1,0 +1,46 @@
+{
+  "name": "llmwindow",
+  "displayName": "llmWindow",
+  "description": "현재 활성화된 파일이 참조하는 모든 내부 코드를 하나의 텍스트로 합쳐주는 VSCode 확장",
+  "version": "0.0.1",
+  "publisher": "wachsenhaus",
+  "repository": "https://github.com/WachsenHaus/llmwindow.git",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:llmwindow.mergeFiles"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "llmwindow.mergeFiles",
+        "title": "Merge Files"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.5",
+    "@types/vscode": "^1.75.0"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.26.3",
+    "@babel/types": "^7.26.3",
+    "glob": "^11.0.0",
+    "typescript": "^5.7.2"
+  }
+}
