@@ -2,7 +2,7 @@
   "name": "llmwindow",
   "displayName": "llmWindow",
   "description": "현재 활성화된 파일이 참조하는 모든 내부 코드를 하나의 텍스트로 합쳐주는 VSCode 확장",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "publisher": "wachsenhaus",
   "repository": "https://github.com/WachsenHaus/llmwindow.git",
   "license": "MIT",

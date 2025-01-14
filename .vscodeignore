@@ -24,6 +24,8 @@ src/**
 .prettierrc.js
 webpack.config.js
 node_modules/**
+!node_modules/typescript/**
+!node_modules/glob/**
 
 # Test files
 test/**
